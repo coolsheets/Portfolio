@@ -1,11 +1,11 @@
 header {
     background-color:rgb(94, 94, 97);
     /* color: #ffffff; White */
-    font-family: fantasy;
+    font-family: cursive;
     color: #ffffff;
     text-align: left;
     padding: 1em;
-    margin: 1em;
+    /* margin: 1em; */
     /* border-radius: 10px; */
 }   
 
@@ -14,7 +14,7 @@ body {
     font-family: calibri, sans-serif;
     /* buffer: 5em; */
     margin: 3%;
-    padding: 3%;
+    /* padding: 3%; */
     /* border: 1px solid #000; */
     border-radius: 10px;
 }
@@ -43,9 +43,9 @@ div {
     outline: none;
     text-decoration: none !important;
     color: #ffffff !important;
-    width: 200px;
+    width: 100px;
     height: 32px;
-    border-radius: 16px;
+    /* border-radius: 16px; */
     background-color: #0A66C2;
     font-family: "SF Pro Text", Helvetica, sans-serif;
 }
