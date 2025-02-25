@@ -1,6 +1,6 @@
 header {
-    background-color:rgb(85, 89, 94)
-    color: #ffffff; /* White */
+    background-color:rgb(85, 89, 94);
+    /* color: #ffffff; White */
     text-align: center;
     padding: 5em;
     margin: 1em;
@@ -10,7 +10,7 @@ header {
 body {
     background-color: #ffffff;
     font-family: calibri, sans-serif;
-    buffer: 5em;
+    /* buffer: 5em; */
     margin: 3%;
     padding: 3%;
     /* border: 1px solid #000; */
