@@ -1,0 +1,33 @@
+header {
+    background-color:rgb(85, 89, 94)
+    color: #ffffff; /* White */
+    text-align: center;
+    padding: 5em;
+    margin: 1em;
+    border-radius: 10px;
+}   
+
+body {
+    background-color: #ffffff;
+    font-family: calibri, sans-serif;
+    buffer: 5em;
+    margin: 3%;
+    padding: 3%;
+    /* border: 1px solid #000; */
+    border-radius: 10px;
+}
+
+div {
+    background-color: #f0f0f0;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 10px;
+    border: #034b03;
+    border-width: 2px;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
