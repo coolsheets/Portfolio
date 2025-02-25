@@ -1,11 +1,14 @@
 header {
-    background-color:rgb(94, 94, 97);
+    box-sizing: content-box !important;
+    /* display: flex; */
+    background-color:rgba(186, 186, 187, 0.61);
     /* color: #ffffff; White */
     font-family: cursive;
-    color: #ffffff;
+    font-size: 200%;
+    color: #920606;
     text-align: left;
     padding: 1em;
-    /* margin: 1em; */
+    margin:0;
     /* border-radius: 10px; */
 }   
 
@@ -13,10 +16,25 @@ body {
     background-color: #ffffff;
     font-family: calibri, sans-serif;
     /* buffer: 5em; */
-    margin: 3%;
+    margin: 1em;
     /* padding: 3%; */
     /* border: 1px solid #000; */
-    border-radius: 10px;
+    /* border-radius: 10px; */
+}
+
+footer {
+    display: inline-flex;
+    flex: auto;
+    background-color: #f0f0f0;
+    /* color: #920606; */
+    font-family: cursive;
+    font-size: medium;
+    text-align: left;
+    padding: 1em;
+    margin: 0;
+    /* border-radius: 10px; */
+    border: #034b03;
+    /* border-width: 2px; */
 }
 
 div {
@@ -37,15 +55,20 @@ div {
 .libutton {
     display: flex;
     flex-direction: column;
+    flex-basis: 100%;
+    align-items: center;
     justify-content: center;
-    padding: 7px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /* font-weight: bold; */
+    font-size: 24px;
+    padding: 2px;
     text-align: center;
     outline: none;
     text-decoration: none !important;
-    color: #ffffff !important;
-    width: 100px;
+    /* color: #ffffff !important; */
+    width: 32px;
     height: 32px;
     /* border-radius: 16px; */
-    background-color: #0A66C2;
-    font-family: "SF Pro Text", Helvetica, sans-serif;
+    /* background-color: #0A66C2; */
+    /* font-family: "SF Pro Text", Helvetica, sans-serif; */
 }
