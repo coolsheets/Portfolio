@@ -1,11 +1,12 @@
 header {
-    background-color:rgb(23, 23, 24);
+    background-color:rgb(94, 94, 97);
     /* color: #ffffff; White */
+    font-family: fantasy;
     color: #ffffff;
-    text-align: center;
-    padding: 5em;
+    text-align: left;
+    padding: 1em;
     margin: 1em;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }   
 
 body {
