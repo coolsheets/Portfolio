@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse-Proximity Path Animation</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
+
+        .moving-image {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 50px;
+            left: 50px;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+
+    <img src="./assets/Jabberwocky_250108.1.png" alt="Moving Image" class="moving-image" id="image">
+
+    <script>
+        const image = document.getElementById('image');
+        const triggerDistance = 300; // How close the mouse needs to be to speed up movement
+        let speed = 0.5; // Initial speed
+        let maxSpeed = 10; // Max speed when mouse is close
+        let baseSpeed = 0.5; // Min speed when mouse is far
+        let progress = 0; // Tracks movement along the path
+
+        // Define the path using waypoints (x, y) positions
+        const path = [
+            { x: 100, y: 100 },
+            { x: 300, y: 500 },
+            { x: 600, y: 200 },
+            { x: 900, y: 700 },
+            { x: 1200, y: 300 },
+            { x: 1400, y: 600 }
+        ];
+
+        function getPointOnPath(t) {
+            const index = Math.floor(t * (path.length - 1));
+            const nextIndex = Math.min(index + 1, path.length - 1);
+            const pointA = path[index];
+            const pointB = path[nextIndex];
+            const localT = (t * (path.length - 1)) % 1; // Normalize progress between two points
+
+            return {
+                x: pointA.x + (pointB.x - pointA.x) * localT,
+                y: pointA.y + (pointB.y - pointA.y) * localT
+            };
+        }
+
+        function updateSpeed(event) {
+            const { clientX: mouseX, clientY: mouseY } = event;
+            const { x, y } = getPointOnPath(progress);
+            const distance = Math.sqrt((mouseX - x) ** 2 + (mouseY - y) ** 2);
+
+            if (distance < triggerDistance) {
+                const proximityFactor = (triggerDistance - distance) / triggerDistance;
+                speed = baseSpeed + proximityFactor * (maxSpeed - baseSpeed);
+            } else {
+                speed *= 0.98; // Slow down gradually when mouse moves away
+                if (speed < baseSpeed) speed = baseSpeed;
+            }
+        }
+
+        function animate() {
+            if (progress < 1) {
+                progress += speed / 1000; // Adjust speed
+                const { x, y } = getPointOnPath(progress);
+                image.style.transform = `translate(${x}px, ${y}px)`;
+            } else {
+                progress = 0; // Loop back to start when reaching the end
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        document.addEventListener('mousemove', updateSpeed);
+        animate();
+    </script>
+
+</body>
+</html>
