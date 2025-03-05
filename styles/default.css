@@ -1,10 +1,12 @@
 header {
-    box-sizing: content-box !important;
     /* display: flex; */
+    box-sizing: content-box !important;
+    /* flex-direction: row;
+    flex-flow: row; */
     background-color:rgba(186, 186, 187, 0.61);
     /* color: #ffffff; White */
     font-family: cursive;
-    font-size: 200%;
+    font-size: 150%;
     color: #920606;
     text-align: left;
     padding: 1em;
@@ -15,8 +17,7 @@ header {
 body {
     background-color: #ffffff;
     font-family: calibri, sans-serif;
-    /* buffer: 5em; */
-    margin: 1em;
+    font-size:small;
     /* padding: 3%; */
     /* border: 1px solid #000; */
     /* border-radius: 10px; */
@@ -26,13 +27,18 @@ table {
     
 }
 
+nav {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: x-small;
+}
+
 footer {
     display: inline-flex;
     flex: auto;
     background-color: #f0f0f0;
     /* color: #920606; */
     font-family: cursive;
-    font-size: medium;
+    font-size: small;
     text-align: left;
     padding: 1em;
     margin: 0;
@@ -75,4 +81,8 @@ div {
     /* border-radius: 16px; */
     /* background-color: #0A66C2; */
     /* font-family: "SF Pro Text", Helvetica, sans-serif; */
+}
+
+#JibJab {
+    float: right;
 }
