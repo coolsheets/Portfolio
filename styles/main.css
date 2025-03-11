@@ -1,0 +1,88 @@
+header {
+    /* display: flex; */
+    box-sizing: content-box !important;
+    /* flex-direction: row;
+    flex-flow: row; */
+    background-color:rgba(150, 150, 182, 0.61);
+    /* color: #ffffff; White */
+    font-family: cursive;
+    font-size: 150%;
+    color: #920606;
+    text-align: left;
+    padding: 1em;
+    margin:0;
+    /* border-radius: 10px; */
+}   
+
+body {
+    background-color: #0a0a0a;
+    font-family: calibri, sans-serif;
+    font-size:small;
+    /* padding: 3%; */
+    /* border: 1px solid #000; */
+    /* border-radius: 10px; */
+}
+
+table {
+    
+}
+
+nav {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: x-small;
+}
+
+footer {
+    display: inline-flex;
+    flex: auto;
+    background-color: #f0f0f0;
+    /* color: #920606; */
+    font-family: cursive;
+    font-size: small;
+    text-align: left;
+    padding: 1em;
+    margin: 0;
+    /* border-radius: 10px; */
+    border: #034b03;
+    /* border-width: 2px; */
+}
+
+div {
+    background-color: #f0f0f0;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 10px;
+    border: #034b03;
+    border-width: 2px;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
+
+.libutton {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    align-items: center;
+    justify-content: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /* font-weight: bold; */
+    font-size: 24px;
+    padding: 2px;
+    text-align: center;
+    outline: none;
+    text-decoration: none !important;
+    /* color: #ffffff !important; */
+    width: 32px;
+    height: 32px;
+    /* border-radius: 16px; */
+    /* background-color: #0A66C2; */
+    /* font-family: "SF Pro Text", Helvetica, sans-serif; */
+}
+
+#JibJab {
+    float: right;
+}
