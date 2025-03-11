@@ -2,10 +2,10 @@ header {
     /* display: flex; */
     box-sizing: content-box !important;
     /* flex-direction: row;
-    flex-flow: row; */
-    background-color:rgba(150, 150, 182, 0.61);
+    flex-flow: row; */;
+    background-color:#c0bdb9;
     /* color: #ffffff; White */
-    font-family: cursive;
+    /* font-family: cursive; */
     font-size: 150%;
     color: #920606;
     text-align: left;
@@ -15,7 +15,7 @@ header {
 }   
 
 body {
-    background-color: #0a0a0a;
+    background-color: #c0bdb9;
     font-family: calibri, sans-serif;
     font-size:small;
     /* padding: 3%; */
@@ -35,7 +35,7 @@ nav {
 footer {
     display: inline-flex;
     flex: auto;
-    background-color: #f0f0f0;
+    background-color:#c0bdb9;;
     /* color: #920606; */
     font-family: cursive;
     font-size: small;
@@ -48,7 +48,7 @@ footer {
 }
 
 div {
-    background-color: #f0f0f0;
+    /* background-color: #f0f0f0; */
     padding: 1em;
     margin: 1em;
     border-radius: 10px;

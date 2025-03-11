@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Tic-Tac-Toe</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #222;
+            color: white;
+            font-family: Arial, sans-serif;
+            perspective: 800px;
+        }
+        .game-container {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
+            gap: 5px;
+            transform-style: preserve-3d;
+            position: relative;
+            transform: rotateX(30deg) rotateY(30deg);
+        }
+        .layer {
+            position: absolute;
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
+            gap: 5px;
+            transform: translateZ(calc(var(--z-index) * 50px));
+        }
+        .cell {
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            font-weight: bold;
+            cursor: pointer;
+            border: 2px solid white;
+        }
+        .cell:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container" id="gameBoard"></div>
+    
+    <script>
+        const board = Array(3).fill().map(() => Array(3).fill().map(() => Array(3).fill(null)));
+        let currentPlayer = "X";
+
+        function createBoard() {
+            const gameBoard = document.getElementById("gameBoard");
+            for (let z = 0; z < 3; z++) {
+                const layer = document.createElement("div");
+                layer.className = "layer";
+                layer.style.setProperty('--z-index', z);
+                for (let x = 0; x < 3; x++) {
+                    for (let y = 0; y < 3; y++) {
+                        const cell = document.createElement("div");
+                        cell.className = "cell";
+                        cell.dataset.x = x;
+                        cell.dataset.y = y;
+                        cell.dataset.z = z;
+                        cell.addEventListener("click", handleMove);
+                        layer.appendChild(cell);
+                    }
+                }
+                gameBoard.appendChild(layer);
+            }
+        }
+
+        function handleMove(event) {
+            const x = event.target.dataset.x;
+            const y = event.target.dataset.y;
+            const z = event.target.dataset.z;
+            
+            if (!board[z][x][y]) {
+                board[z][x][y] = currentPlayer;
+                event.target.textContent = currentPlayer;
+                currentPlayer = currentPlayer === "X" ? "O" : "X";
+            }
+        }
+
+        createBoard();
+    </script>
+</body>
+</html>
