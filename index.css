@@ -1,0 +1,34 @@
+body {
+    background: white;
+}
+
+@media (prefers-color-scheme:dark) {
+    body {
+        background: black;
+    }
+    /* .img-toggle {
+        background: url:url(./assets/AngryBlackSwan.jpg) center / cover;
+    } */
+}
+
+img {
+    width: 30lvw;
+    height:30lvh;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 70px;
+}
+
+.img-toggle {
+    width: 30lvw;
+    height:30lvh;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 70px;
+    background: url(./assets/BlackSwan.jpg) center / cover;
+}
+

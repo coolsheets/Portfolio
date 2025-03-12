@@ -6,134 +6,22 @@
     <title>Portfolio</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel='stylesheet' href='./styles/main.css'>
-    <link rel="icon" type="image/x-icon" href="/assets/orange.png" background-color="Black">    
+    <link rel='stylesheet' href='./index.css'>
+    <link rel="icon" type="image/x-icon" href="./assets/orange.png" background-color="Black">    
 </head>
 <body>
-    <header>
-        <!-- <button onclick="myMood()">Toggle dark mode</button> -->
-        <div class="flex-container">
-            <div><h1 id = "day_header">mindScape</h1></div>
-            <!-- <div><label>A confused label</label></div> -->
-            <div><input id='switch' type="checkbox"/></div>
-        </div>     
-    </header>             
     <main>
-        <div>  
-           <img id="night" src="./assets/dall-e/DALL·E (night).webp" alt="JibJab" float="right"> 
-           <img id="day" src="./assets/dall-e/(day) DALL·E 2025-03-11 11.55.38 - A mosaic-style abstract portrait of a middle-aged bald man with a slightly rounder head, clean-shaven without a beard, wearing glasses, a faded black .webp" alt="JabJib" float="left">
-        </div>
-        <div>
-           <p>
-               Hi, I'm a software developer with a passion for learning and teaching. I'm currently studying at <a href="https://www.inceptionu.com/">InceptionU</a> and I'm excited to see where this journey takes me.
-               As a life long learner I enjoy solving problems and have spent the majority of my career in doing so.
-           
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos facilis qui numquam vitae, ab pariatur aliquid placeat, assumenda, reprehenderit delectus et sapiente exercitationem non dolores velit optio doloremque est praesentium.
-               Consequuntur ea ipsa id quam est consectetur laudantium, sint earum, minima quibusdam nulla. Voluptates magni excepturi officia debitis delectus sint est, consectetur itaque deserunt tenetur aliquid sunt fuga alias laudantium.
-               Ipsum aspernatur labore ex, velit, quam id iure a modi consequuntur nam aperiam facere. Optio, voluptatibus. Facere magni, necessitatibus exercitationem soluta ullam excepturi impedit consequatur laborum molestias iusto quas qui!
-               Soluta vero quidem labore molestias ad? Omnis veritatis sequi minus error suscipit perferendis inventore. Atque eos ab ratione sunt asperiores, magni sequi numquam earum quia amet debitis. Nisi, sunt minus!
-               Repudiandae facilis dicta pariatur obcaecati vero delectus saepe, alias magnam sunt dolore quas aspernatur quidem repellat fugiat doloremque quis sit reiciendis? Natus deleniti iure voluptatum aut provident. Deserunt, mollitia id!
-            </p>
-           
-        </div>
+      <picture>
+            <source
+                srcset="./assets/AngryBlackSwan.jpg"
+                media="(prefers-color-scheme:dark)"
+            >
+            <img src="./assets/BlackSwan.jpg">
+        </picture>
+        <!-- <div class="img-toggle">
 
-    <div>
-        <table>
-            <tr>
-                <th>UUID</th>
-                <th>Timestamp</th>
-                <th>x</th>
-                <th>y</th>
-                <th>z</th>
-                <th>Description</th>
-            </tr>
-            <tr>
-                <td>UniqueID</td>
-                <td><time datetime="now"></time></td>
-                <td>5,000</td>
-                <td>10,000</td>
-                <td>500</td>
-                <td>First Cut</td>
-            </tr>
-        </table>
-    </div>
-    <div>
-        <form action="/submit" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-            <button type="submit">Send</button>
-        </form>
-    </div>
-    <h2>Highlights</h2>
-    <div>
-        <h3>Academic</h3>
-        <ul>
-            <li>1985, NAIT, Honours Diploma in Surveying Technology</li>
-            <li>2003, WCBELS, Certificate of Completion</li>
-            <li>2014, Queen's University, MBA</li>
-        </ul>
-    </div>
-    <div>
-        <h3>Professional</h3>
-        <ul>
-            <li>2003, Canada Land Surveyor</li>
-            <li>2005, Alberta Land Surveyor</li>
-            <!-- <li>Life Long Learner</li> -->
-        </ul>
-    </div>
-    <div>
-        <h3>Career Accomplishments</h3>
-        <ul>
-            <!-- <li>2003, Canada Land Surveyor</li>
-            <li>2005, Alberta Land Surveyor</li> -->
-            <li>2017, President Alberta Land Surveyors Association</li>
-            <!-- <li>Life Long Learner</li> -->
-        </ul>
-    </div>
-    <div>
-        <h3>Projects</h3>
-        <ul>
-            <li>Western Headworks</li>
-            <li>Parcel Mapping</li>
-            <li>TEMI Yetagun</li>
-            <li>Royal Thailand Railway</li>
-            <li></li>
-        </ul>
-    </div>
-    <div>
-        <h3>Solutions</h3>
-        <ul>
-            <li>MERIT</li>
-            <li>Mission Central</li>
-            <li>CGM</li>
-        </ul>
-    </div>
-    <!-- <div>
-        <h3>Leadership</h3>
-        <ul>
-          <Li></Li>
-          <Li></Li>
-          <Li></Li>
-          <Li></Li>
-        </ul>
-    </div> -->
-    <!-- <h3>Management</h3>
-    <h3>Teamwork</h3>
-    <h3>Communication</h3> -->
-    <!-- <h3>Problem Solving</h3> -->
-<!-- </div>     -->
-    <footer>
-        <div>
-            &copy; 2025
-            <a href="mailto:mfretwell@mGeo.ca">Mike Fretwell </a>
-            <a class="libutton" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=mikefretwell" target="_blank">
-                <img src="./assets/linkedin-3-32.png" alt="linkedin">
-            </a>
         </div>
-
-    </footer>
+         -->
     </main>
 </body>
 </html>
