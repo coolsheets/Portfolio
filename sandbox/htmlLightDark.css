@@ -2,14 +2,23 @@ html {
   .dark {
     background: black;
     color: cyan;
+    img {
+      float:right;
+      min-height: 10%;
+      max-height: 20%;
+    }
   }
   .light {
     background: whitesmoke;
-    color: ;
+    color:darkslategray;
+    float:left;
+    min-height: 10%;
+    max-height: 20%;
+
 
   }
 }
-
+/* 
 header {
     display: flex;
     background-color: green;
@@ -21,4 +30,4 @@ header {
   
   nav {
     background-color: yellow;
-  }
+  } */
